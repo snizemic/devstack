@@ -1,0 +1,18 @@
+{
+  "root" : {
+    "src" : "./src",
+    "build" : "./build",
+    "dist" : "./dist"
+  },
+  "tasks" : {
+    "html" : {
+      "src" : "html"      
+    }
+  },
+  "css" : {
+    "src" : "scss"    
+  },
+  "browserSync" : {
+    "baseDir" : "./build/"
+  }
+}
