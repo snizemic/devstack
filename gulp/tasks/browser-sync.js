@@ -7,10 +7,12 @@ if(!config.tasks.browserSync){
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 
-gulp.task('browser-sync', function() {
+var browserSyncTask = function() {
 	browserSync.init({
 		server: {
 			baseDir: config.tasks.browserSync.baseDir
 		}
 	});
-});
+};
+
+gulp.task('browser-sync', browserSyncTask);

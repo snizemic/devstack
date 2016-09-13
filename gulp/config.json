@@ -7,12 +7,16 @@
   "tasks" : {
     "html" : {
       "src" : "html"      
+    },
+    "css" : {
+      "src" : "scss",
+      "dest" : "css",
+      "sass" : {
+        "includePaths" : ["./node_modules/bootstrap-sass/assets/stylesheets"]    
+      }
+    },
+    "browserSync" : {
+      "baseDir" : "./build/"
     }
-  },
-  "css" : {
-    "src" : "scss"    
-  },
-  "browserSync" : {
-    "baseDir" : "./build/"
   }
 }
