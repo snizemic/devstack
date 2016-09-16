@@ -1,0 +1,28 @@
+{
+  "root" : {
+    "src" : "./src",    
+    "dist" : "./dist"
+  },
+  "tasks" : {
+    "html" : {
+      "src" : "html"      
+    },
+    "css" : {
+      "src" : "sass",      
+      "dest" : "css",      
+      "sass" : {        
+        "includePaths" : ["./node_modules/bootstrap-sass/assets/stylesheets"]    
+      }
+    },
+    "javascript" : {
+      "src" : "javascript",
+      "dest" : "js",
+      "vendor" : [
+        "./node_modules/jquery/dist/jquery.min.js"        
+      ]
+    },
+    "browserSync" : {
+      "baseDir" : "./dist/"
+    }
+  }
+}

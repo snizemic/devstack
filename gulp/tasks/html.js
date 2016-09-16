@@ -1,7 +1,17 @@
-var gulp = require('gulp');
-var config = require('../config').html;
+var config = require('../config');
 
-gulp.task('html', function() {
-    gulp.src(config.src)
-    .pipe(gulp.dest(config.dest));
-});
+if (!config.tasks.html) {
+	return;
+}
+
+var gulp = require('gulp');
+var path = require('path');
+var browserSync = require('browser-sync')
+
+var htmlTask = function(){
+	return gulp.src(path.join(config.root.src, config.tasks.html.src, '/**/*.html'))
+	.pipe(gulp.dest(config.root.dist))
+	.pipe(browserSync.stream());
+}
+
+gulp.task('html', htmlTask);
