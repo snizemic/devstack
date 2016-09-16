@@ -3,7 +3,7 @@ var del    = require('del')
 var config = require('../config')
 
 var cleanTask = function (cb) {
-  del([config.root.dist, config.root.build]).then(function (paths) {
+  del([config.root.dist]).then(function (paths) {
     cb()
   })
 }

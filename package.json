@@ -1,14 +1,15 @@
 {
-  "name": "devstack",
+  "name": "gulp-frontend-devstack",
   "version": "1.0.0",
-  "description": "Basic Gulp web devstack",
-  "repository": "https://github.com/snizemic/devstack/",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Simple frontend web devstack with Gulp and Browsersync",
+  "repository": "https://github.com/snizemic/gulp-frontend-devstack/"
   "author": "Michal Snizek",
-  "license": "ISC",
+  "license": [
+    "MIT",
+    "BSD-3-Clause",
+    "GPL-2.0",
+    "GPL-3.0"
+  ],
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.15.0",
@@ -20,6 +21,7 @@
     "gulp-watch": "^4.3.9",
     "jquery": "^3.1.0",
     "path": "^0.12.7",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "webpack-stream": "^3.2.0"
   }
 }

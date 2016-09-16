@@ -15,7 +15,7 @@ var cssTask = function(){
 		style: 'expanded',
 		includePaths : config.tasks.css.sass.includePaths		
 	}))	
-	.pipe(gulp.dest(path.join(config.root.build, config.tasks.css.dest)))	
+	.pipe(gulp.dest(path.join(config.root.dist, config.tasks.css.dest)))	
 	.pipe(browserSync.stream());
 }
 

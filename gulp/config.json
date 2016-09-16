@@ -1,7 +1,6 @@
 {
   "root" : {
-    "src" : "./src",
-    "build" : "./build",
+    "src" : "./src",    
     "dist" : "./dist"
   },
   "tasks" : {
@@ -9,18 +8,21 @@
       "src" : "html"      
     },
     "css" : {
-      "src" : "scss",
-      "dest" : "css",
-      "sass" : {
+      "src" : "sass",      
+      "dest" : "css",      
+      "sass" : {        
         "includePaths" : ["./node_modules/bootstrap-sass/assets/stylesheets"]    
       }
     },
     "javascript" : {
       "src" : "javascript",
-      "dest" : "js"
+      "dest" : "js",
+      "vendor" : [
+        "./node_modules/jquery/dist/jquery.min.js"        
+      ]
     },
     "browserSync" : {
-      "baseDir" : "./build/"
+      "baseDir" : "./dist/"
     }
   }
 }
