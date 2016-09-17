@@ -2,7 +2,7 @@
   "name": "gulp-frontend-devstack",
   "version": "1.0.0",
   "description": "Simple frontend web devstack with Gulp and Browsersync",
-  "repository": "https://github.com/snizemic/gulp-frontend-devstack/"
+  "repository": "https://github.com/snizemic/gulp-frontend-devstack/",
   "author": "Michal Snizek",
   "license": [
     "MIT",
