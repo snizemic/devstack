@@ -6,7 +6,7 @@ if (!config.tasks.html) {
 
 var gulp = require('gulp');
 var path = require('path');
-var browserSync = require('browser-sync')
+var browserSync = require('browser-sync').get('dev-server');
 
 var htmlTask = function(){
 	return gulp.src(path.join(config.root.src, config.tasks.html.src, '/**/*.html'))
