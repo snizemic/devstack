@@ -10,9 +10,13 @@
     "GPL-2.0",
     "GPL-3.0"
   ],
+  "scripts": {
+    "gulp": "gulp"
+  },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.15.0",
+    "browserify": "^13.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
@@ -22,6 +26,8 @@
     "jquery": "^3.1.0",
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
     "webpack-stream": "^3.2.0"
   }
 }
