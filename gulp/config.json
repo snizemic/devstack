@@ -16,10 +16,7 @@
     },
     "javascript" : {
       "src" : "javascript",
-      "dest" : "js",
-      "vendor" : [
-        "./node_modules/jquery/dist/jquery.min.js"        
-      ]
+      "dest" : "js"      
     },
     "browserSync" : {
       "baseDir" : "./dist/"
