@@ -9,7 +9,7 @@ var browserify = require('browserify');
 var vinylSourceStream = require('vinyl-source-stream');
 var vinylBuffer = require('vinyl-buffer');
 var path = require('path');
-var browserSync = require('browser-sync').get('dev-server');
+var browserSync = require('browser-sync').get(config.tasks.browserSync.serverName);
 
 
 var javascriptTask = function () {

@@ -5,10 +5,10 @@ if (!config.tasks.browserSync) {
 }
 
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create('dev-server');
+var browserSync = require('browser-sync').create(config.tasks.browserSync.serverName);
 
 var browserSyncTask = function () {
-	browserSync.init({
+	return browserSync.init({
 		server: {
 			baseDir: config.tasks.browserSync.baseDir
 		}

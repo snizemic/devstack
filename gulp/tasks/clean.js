@@ -1,11 +1,10 @@
-var gulp   = require('gulp')
-var del    = require('del')
-var config = require('../config')
+var config = require('../config');
+var gulp   = require('gulp');
+var del    = require('del');
+var path = require('path');
 
 var cleanTask = function (cb) {
-  del([config.root.dist]).then(function (paths) {
-    cb()
-  })
+  return del([path.join(config.root.dist, '/**/*')]);
 }
 
 gulp.task('clean', cleanTask)

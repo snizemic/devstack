@@ -19,6 +19,7 @@
       "dest" : "js"      
     },
     "browserSync" : {
+      "serverName": "dev-server",
       "baseDir" : "./dist/"
     }
   }
