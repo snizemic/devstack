@@ -7,7 +7,7 @@ if (!config.tasks.css) {
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var path = require('path');
-var browserSync = require('browser-sync')
+var browserSync = require('browser-sync').get(config.tasks.browserSync.serverName);
 
 var cssTask = function(){
 	return gulp.src(path.join(config.root.src, config.tasks.css.src, '/**/*.scss'))	
