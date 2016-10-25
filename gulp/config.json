@@ -9,7 +9,9 @@
     },
     "css" : {
       "src" : "sass",      
-      "dest" : "css",      
+      "dest" : "css",
+      "vendorFolder": "vendor",
+      "vendorFile": "vendor.scss",      
       "sass" : {        
         "includePaths" : ["./node_modules/bootstrap-sass/assets/stylesheets"]    
       }

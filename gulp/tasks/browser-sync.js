@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('../config');
 
 if (!config.tasks.browserSync) {
@@ -15,4 +17,4 @@ var browserSyncTask = function () {
 	});
 };
 
-gulp.task('browser-sync', browserSyncTask);
+module.exports = browserSyncTask;
