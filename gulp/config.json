@@ -1,28 +1,39 @@
 {
-  "root" : {
-    "src" : "./src",    
-    "dist" : "./dist"
+  "root": {
+    "src": "./src",
+    "dist": "./dist"
   },
-  "tasks" : {
-    "html" : {
-      "src" : "html"      
+  "tasks": {
+    "html": {
+      "src": "html"
     },
-    "css" : {
-      "src" : "sass",      
-      "dest" : "css",
+    "css": {
+      "src": "sass",
+      "dest": "css",
       "vendorFolder": "vendor",
-      "vendorFile": "vendor.scss",      
-      "sass" : {        
-        "includePaths" : ["./node_modules/bootstrap-sass/assets/stylesheets"]    
+      "vendorFile": "vendor.scss",
+      "sass": {
+        "includePaths": [
+          "./node_modules/bootstrap-sass/assets/stylesheets"
+        ]
       }
     },
-    "javascript" : {
-      "src" : "javascript",
-      "dest" : "js"      
+    "javascript": {
+      "src": "javascript",
+      "dest": "js",
+      "entryFile": "app.js",
+      "vendorFile": "vendor.js",
+      "libs": [
+        "jquery"
+      ]
     },
-    "browserSync" : {
+    "images": {
+      "src": "images",
+      "dest": "images"
+    },
+    "browserSync": {
       "serverName": "dev-server",
-      "baseDir" : "./dist/"
+      "baseDir": "./dist/"
     }
   }
 }

@@ -13,14 +13,14 @@ var browserSync = require('browser-sync').get(config.tasks.browserSync.serverNam
 
 //===== Vendor CSS Task =====//
 var cssVendorTaskPaths = [
-	path.join(config.root.src, config.tasks.css.src, config.tasks.css.vendorFolder, '/**'),
-	path.join(config.root.src, config.tasks.css.src, config.tasks.css.vendorFile)
+	config.root.src + '/' + config.tasks.css.src + '/' + config.tasks.css.vendorFolder + '/**/*.scss',
+	config.root.src + '/' + config.tasks.css.src + '/' + config.tasks.css.vendorFile
 ];
 
 var cssVendorTask = function () {
 	return gulp.src(cssVendorTaskPaths)
 		.pipe(sass({
-			style: 'expanded',
+			outputStyle: 'compressed',
 			includePaths: config.tasks.css.sass.includePaths
 		}))
 		.pipe(gulp.dest(path.join(config.root.dist, config.tasks.css.dest)))
@@ -29,23 +29,25 @@ var cssVendorTask = function () {
 
 //===== App CSS Task =====//
 var cssTaskPaths = [
-	path.join(config.root.src, config.tasks.css.src, '/**/*.scss'),
-	path.join('!' + config.root.src, config.tasks.css.src, config.tasks.css.vendorFolder, '/**'),
-	path.join('!' + config.root.src, config.tasks.css.src, config.tasks.css.vendorFile)
+	config.root.src + '/' + config.tasks.css.src + '/**/*.scss',	
+	'!' + config.root.src + '/' + config.tasks.css.src + '/' + config.tasks.css.vendorFolder + '/**/*.scss',
+	'!' + config.root.src + '/' + config.tasks.css.src + '/' + config.tasks.css.vendorFile
 ];
 
-console.log(cssTaskPaths);
+//console.log(cssTaskPaths);
 
 var cssTask = function () {
 	return gulp.src(cssTaskPaths)
 		.pipe(sass({
-			style: 'expanded'			
+			outputStyle: 'nested'
 		}))
 		.pipe(gulp.dest(path.join(config.root.dist, config.tasks.css.dest)))
 		.pipe(browserSync.stream());
 };
 
 module.exports = {
+	cssVendorTaskPaths: cssVendorTaskPaths,
 	cssVendorTask: cssVendorTask,
+	cssTaskPaths: cssTaskPaths,
 	cssTask: cssTask
 }
