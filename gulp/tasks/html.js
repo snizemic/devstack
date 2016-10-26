@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('../config');
 
 if (!config.tasks.html) {
@@ -14,4 +16,4 @@ var htmlTask = function(){
 	.pipe(browserSync.stream());
 }
 
-gulp.task('html', htmlTask);
+module.exports = htmlTask;
